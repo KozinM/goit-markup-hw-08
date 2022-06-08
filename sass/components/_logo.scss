@@ -1,0 +1,34 @@
+
+
+/* ------------- <Logo> ------------- */
+.logo-link{
+    display: block;
+    align-items: center;
+    
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 93px;
+      
+    text-decoration: none;
+    font-family: "Ralway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  
+    color:var(--active-color);
+  
+    transition: color var(--transitime) var(--transifunction),
+    --color1 var(--transitime) var(--transifunction);
+  }
+  
+  .logo-link__text{
+    color: var(--text-color);
+
+  &--dark{
+      color: var(--button-txt);
+    }
+  }
+  /* ------------- <Logo> ------------- */
+
+  

@@ -1,0 +1,15 @@
+.works-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 56px;
+}
+
+.works-filters__item {
+  margin-right: 8px;
+
+  &--last {
+    margin-right: 0;
+  }
+}

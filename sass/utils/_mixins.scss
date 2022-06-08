@@ -1,0 +1,11 @@
+@mixin section-padds($m-t,$m-b,$m-l:false,$m-r:false){
+padding-top:$m-t;
+padding-bottom: $m-b;
+
+@if $m-l{
+
+padding-left: $m-l;}
+
+@if $m-r {
+padding-right: $m-r;}
+}

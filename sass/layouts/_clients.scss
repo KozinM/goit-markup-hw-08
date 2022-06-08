@@ -1,0 +1,20 @@
+/* ------------- <Clients> ------------- */
+
+.clients {
+  @include section-padds(94px, 94px) ;
+}
+
+.clients__container {
+  flex-direction: column;
+}
+
+.clients__title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* ------------- <Clients> ------------- */

@@ -1,0 +1,33 @@
+/* ------------- <Works> ------------- */
+
+.works {
+  @include section-padds(94px, 94px);
+}
+
+.works__container {
+  flex-direction: column;
+}
+
+.works__info {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 56px;
+}
+
+.works__title {
+  text-transform: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--text-color);
+}
+
+.works__text {
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  color: var(--ordinary-text);
+}
+/* ------------- <Works> ------------- */

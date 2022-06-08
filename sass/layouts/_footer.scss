@@ -1,0 +1,45 @@
+/* ------------- <FOOTER> ------------- */
+
+.footer {
+  @include section-padds(60px, 60px);
+
+  color: var(--button-txt);
+  background-color: var(--dark-background);
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__logo-link {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.logo-adress {
+  margin-right: 70px;
+}
+.adress {
+  margin-bottom: 9px;
+
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--button-txt);
+}
+
+.footer-socials-container {
+  margin-right: 93px;
+}
+
+.footer-social-container__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+/* ------------- <FOOTER> ------------- */
