@@ -1,0 +1,27 @@
+.menu-button{
+    display: none;
+    margin:0;
+    padding:0;
+    border:0;
+    background-color: transparent;
+  
+    @include mq(mobile-only){
+        display:block;
+    }
+  }
+  
+  .menu-button__cross{
+    display:none;
+  }
+  .menu-button.is-open  .menu-button__cross{
+      @include mq(mobile-only){
+        display:block;
+        z-index: 10;
+      }
+  }
+  
+  .menu-button.is-open  .menu-button__burger{
+    display:none;
+  }
+  
+  

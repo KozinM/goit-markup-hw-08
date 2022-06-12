@@ -5,6 +5,11 @@
 .navigation__list {
   display: flex;
   align-items: center;
+
+  @include mq(mobile-only){
+    display:block;
+    text-align: left;
+  }
 }
 
 .navigation__item {
@@ -13,6 +18,15 @@
 
   &:last-child {
     margin-right: 0px;
+  }
+
+  @include mq(mobile-only){
+    display: block;
+    margin: 0px;
+    margin-bottom:10px;
+    &:last-child{
+      margin-bottom:0;
+    }
   }
 }
 
@@ -27,6 +41,14 @@
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+
+  @include mq(mobile-only) {
+
+    font-size: 40px;
+    line-height: 1.175px;
+    text-align: left;
+    letter-spacing: 0.02em;
+  }
 
   transition: color var(--transitime) var(--transifunction),
     --color1 var(--transitime) var(--transifunction);
