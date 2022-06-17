@@ -2,6 +2,10 @@
 .navigation {
   display: flex;
   align-items: center;
+  
+  @include mq(mobile-only) {
+    margin-bottom: 302px;
+  }
 }
 
 .navigation__item {
@@ -14,9 +18,7 @@
 }
 
 .navigation__list {
-  @include mq(mobile-only) {
-    margin-bottom: 302px;
-  }
+
 
   @include mq(tablet) {
     display: flex;

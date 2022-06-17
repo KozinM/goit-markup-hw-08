@@ -6,12 +6,16 @@
 
   width: 100%;
   height: 400px;
-  background-image: url(../images/hero/bg_hero_bg_m.jpg),
-    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: 
+  linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  url(../images/hero/bg_hero_bg_m.jpg);
+    
 
   @include mq(retina) {
-    background-image: url(../images/hero/bg_hero_bg_m@2.jpg),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image:
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/bg_hero_bg_m@2.jpg);
+     
   }
   background-repeat: no-repeat;
   background-position: center;
@@ -21,11 +25,15 @@
   @include mq(tablet) {
     width: 768px;
 
-    background-image: url(../images/hero/bg_hero_bg_t.jpg),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image:
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/bg_hero_bg_t.jpg);
+     
     @include mq(retina) {
-      background-image: url(../images/hero/bg_hero_bg_t@2.jpg),
-        linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+      background-image:
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/bg_hero_bg_t@2.jpg);
+       
     }
   }
 
@@ -35,11 +43,15 @@
     width: 1600px;
     height: 600px;
 
-    background-image: url(../images/hero/bg_hero_bg_d.jpg),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image:
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/bg_hero_bg_d.jpg);
+     
     @include mq(retina) {
-      background-image: url(../images/hero/bg_hero_bg_d@2.jpg),
-        linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+      background-image:
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/bg_hero_bg_d@2.jpg);
+       
     }
   }
 }

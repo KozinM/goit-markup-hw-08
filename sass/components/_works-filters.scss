@@ -14,7 +14,26 @@
   }
   
   .works-filters__item {
+
     margin-right: 8px;
+  
+
+    @include mq(mobile-only) {
+      margin-bottom: 15px;
+
+      &:nth-last-child(-n+2){
+        margin-bottom:0px;
+      }
+
+      &:nth-child(3){
+        margin-right: 0px;
+      }
+    }
+    @include mq(tablet){
+      &:not(:last-child){
+      margin-right: 8px;
+    }
+  }
   
     &--last {
       margin-right: 0;

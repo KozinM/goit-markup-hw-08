@@ -20,6 +20,10 @@
 }
 
 .footer_logo-adress{
+
+  @include mq(mobile-only) {
+    margin-bottom: 60px;
+  }
   @include mq(tablet){
     margin-right:165px;
   }
@@ -51,9 +55,9 @@
 }
 
 .contacts.footer__contacts {
-  @include mq(mobile-only) {
+/*   @include mq(mobile-only) {
     margin-bottom: 60px;
-  }
+  } */
   @include mq(tablet){
     display: flex;
     flex-direction: column;
@@ -87,11 +91,17 @@
   margin-left: auto;
   margin-right: auto;
 
-  padding-bottom: 60px;
+  
+  @include mq(mobile-only){
+    margin-bottom: 60px;
+  }
+
+  /* padding-bottom: 60px; */
 
   @include mq(tablet){
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 60px;
   }
   @include mq(desktop){
     margin-right: 93px;
