@@ -720,6 +720,10 @@ body {
   }
 }
 
+.info__card--3c {
+  margin-bottom: 30px;
+}
+
 @media screen and (min-width: 1200px) {
   .info__card--3c {
     width: 370px;
@@ -727,7 +731,7 @@ body {
   .info__card--3c:nth-child(3n) {
     margin-right: 0;
   }
-  .info__card--3c:nth-last-child(-n + 3) {
+  .info__card--3c:nth-last-child(-n + 4) {
     margin-bottom: 0;
   }
 }

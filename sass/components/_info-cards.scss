@@ -76,12 +76,15 @@
   }
 
   &--3c {
+    margin-bottom:30px;
     @include mq(desktop){
       width: 370px;
+
       &:nth-child(3n) {
         margin-right: 0;
       }
-      &:nth-last-child(-n + 3) {
+    
+      &:nth-last-child(-n + 4) {
         margin-bottom: 0;
       }
     }
