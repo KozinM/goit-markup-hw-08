@@ -1,20 +1,17 @@
 /* ------------- <Container> ------------- */
 .container {
-
-    position: relative;
-  
-  /*   width: 1200px; */  
-  @include section-padds(0,0,15,15);
+ position: relative;
+  @include section-padds(0,0,15px,15px);
   
     margin-left: auto;
     margin-right: auto;
   
     @include mq(mobile){
+
       width:480px;
     }
   
     @include mq(tablet){
-      display: flex;
       width:768px;
     }
   
@@ -25,24 +22,26 @@
   }
   
   .menu-container {
-    padding: 15px;
-  
-    background-color: var(--button-txt);
-  
-    font-size: 20px;
-
+    margin-left:auto;
     @include mq(mobile-only)
     {
       display:none;
       position: absolute;
-      outline: 1px tomato solid;
-      top: 0;
-      left: 0;
-      z-index: 1;
-  
+
+      padding: 40px;
+      padding-top: 48px;
+    
+      background-color: var(--button-txt);
+    
+      font-size: 20px;
+
       height: 796px;
       width: 100%;
-      
+
+      top: 0;
+      left: 0;
+      z-index: 10;
+  
       &.is-open{
         display:block;
       }

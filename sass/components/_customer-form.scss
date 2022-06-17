@@ -1,0 +1,154 @@
+/* -------  Customer form  ------- */
+.customer-form__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  
+    &:hover .customer-form__icon {
+      fill: var(--active-color);
+    }
+  }
+  
+  .customer-form__label {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  
+    color: var(--ordinary-text);
+  
+    &--copyright {
+      display: flex;
+      align-items: center;
+      padding-left: 26px;
+      margin-bottom: 30px;
+  
+      font-size: 12px;
+      line-height: setLineHeight(14,12);
+      letter-spacing: 0.03em;
+
+      @include mq(desktop){
+        padding-left: 38px;
+
+        font-size: 14px;
+        line-height: setLineHeight(24,14);
+        letter-spacing: 0.03em;
+      }
+    }
+  }
+  
+  .customer-form__input {
+    height: 40px;
+    padding-left: 42px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  
+    color: var(--text-color);
+  
+    transition: border var(--transitime) var(--transifunction),
+      color var(--transitime) var(--transifunction);
+  
+    &--textarea {
+      margin-bottom: 20px;
+
+      padding-left: 16px;
+      padding-top: 12px;
+      padding-right: 16px;
+      padding-bottom: 12px;
+      height: 120px;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+  
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.01em;
+  
+      color: rgba(117, 117, 117, 0.5);
+  
+      resize: none;
+    }
+  
+    &--checkbox {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      position: absolute;
+    }
+  
+    &:focus-within,
+    &--textarea:focus-within {
+      outline: 0;
+      border: 1px solid var(--active-color);
+    }
+  
+    &:focus-within + .customer-form__icon,
+    &--textarea:focus-within + .customer-form__icon {
+      fill: var(--active-color);
+    }
+  
+    &:hover,
+    &:focus,
+    &--textarea:hover,
+    &--textarea:focus {
+      border: 1px solid var(--active-color);
+    }
+  
+    &--checkbox:checked
+      ~ .customer-form__mod-checkbox
+      > .customer-form__mod-icon {
+      background-color: var(--active-color);
+      border: 1px solid var(--active-color);
+    }
+  
+    &--checkbox:focus ~ .customer-form__mod-checkbox > .customer-form__mod-icon {
+      border: 2px solid var(--active-color);
+    }
+  }
+  
+  .customer-form__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+  
+    transition: fill var(--transitime) var(--transifunction);
+  }
+  
+  .customer-form__mod-icon {
+    position: absolute;
+    display: block;
+    top: 0;
+    transform: translate(0, 0%);
+    left: 0px;
+    border: 2px solid var(--text-color);
+    border-radius: 2px;
+    background-color: var(--button-txt);
+    transition: background-color var(--transitime) var(--transifunction);
+
+    @include mq(desktop){
+      left: 12px;
+
+      transform: translate(0, 20%);
+    }
+  }
+  
+  .customer-form__link--copyright {
+    display: block;
+  
+    &,
+    &:visited {
+      color: var(--active-color);
+    }
+  }
+  
+  /* -------  Customer form  ------- */

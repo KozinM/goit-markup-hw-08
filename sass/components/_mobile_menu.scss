@@ -1,36 +1,97 @@
-.menu-button{
+.menu-button {
+  display: none;
+
+  margin-left: auto;
+  margin-right: 25.33px;
+  padding: 0;
+
+  border: 0;
+
+  background-color: transparent;
+  z-index: 11;
+
+  transition: color var(--transitime) var(--transifunction);
+
+  
+  &:hover,
+  &:focus {
+    fill: var(--active-color);
+    cursor: pointer;
+  }
+
+  @include mq(mobile-only) {
+    display: block;
+  }
+
+}
+
+.menu-container__contacts {
+  display:flex;
+  flex-direction: column;
+ justify-content: center;
+/*   justify-content: left; */
+}
+
+.contacts__item.menu-container__contacts {
+  @include mq(mobile-only) {
+    margin-bottom: 32px;
+  }
+  @include mq(tablet-only){
+    margin-bottom: 10px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.menu-button__cross {
+  display: none;
+
+}
+.menu-button.is-open .menu-button__cross {
+  @include mq(mobile-only) {
+    display: block;
+  }
+}
+
+.menu-button.is-open .menu-button__burger {
+  display: none;
+}
+
+.mobile-socials {
+  @include mq(tablet) {
     display: none;
-
-    margin-left:auto;
-
-    border:0;
-
-    background-color: transparent;
-    z-index: 10;
-  
-    @include mq(mobile-only){
-        display:block;
-    }
   }
-  
-  .menu-button__cross{
-    display:none;
-  }
-  .menu-button.is-open  .menu-button__cross{
-      @include mq(mobile-only){
-        display:block;
+}
 
-      }
+.socials-list.mobile-socials__socials-list {
+  @include mq(mobile-only) {
+    display: flex;
+
+    align-items: center;
+    justify-content: start;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: setLineHeight(22, 18);
+    letter-spacing: 0.02em;
   }
-  
-  .menu-button.is-open  .menu-button__burger{
-    display:none;
+}
+
+.socials-list__item.mobile-socials__socials-list {
+  display: flex;
+  margin-right: 0px;
+  &:last-child {
+    margin-right: 0;
   }
 
-  .mobile-socials{
-
-    @include mq(tablet)
-    {display: none;}
+  &:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    margin: 0 10px;
+    width: 2px;
+    height: 22px;
+    background-color: rgba(33, 33, 33, 0.2);
   }
-  
-  
+}

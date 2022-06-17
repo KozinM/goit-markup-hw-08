@@ -1,0 +1,23 @@
+.works-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    padding-bottom: 56px;
+
+    @include mq(mobile-only){
+        flex-wrap: wrap;
+        justify-content: left;
+
+        padding-bottom: 40px;
+    }
+  }
+  
+  .works-filters__item {
+    margin-right: 8px;
+  
+    &--last {
+      margin-right: 0;
+    }
+  }
+  

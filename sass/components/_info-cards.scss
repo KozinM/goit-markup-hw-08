@@ -1,0 +1,235 @@
+.info {
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include mq(desktop){
+    flex-wrap: nowrap;
+  }
+}
+
+.info__card {
+
+  &--relative {
+    position: relative;
+    /* z-index: -1; */
+  }
+
+  &--relative::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    display: block;
+    height: 70px;
+    margin: 0;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+
+  &--team {
+    background-color: var(--button-txt);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+   // info__card--3c made for cards in 3 columns, in particular for work cards
+
+
+  @include mq(mobile-only) {
+    max-width: 450px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @include mq(tablet-only) {
+    width: 354px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    & {
+      margin-bottom: 30px;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+    @include mq(desktop) {
+      width: 370px;
+     
+    }
+  }
+  @include mq(tablet) {
+    margin-right: 30px;
+  }
+
+  @include mq(desktop) {
+    width: 270px;
+    margin-right: 30px;
+
+    &--width {
+      width: unset;
+    }
+  }
+
+  &--3c {
+    @include mq(desktop){
+      width: 370px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.info__title {
+  display: block;
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: setLineHeight(16, 14);
+  text-transform: uppercase;
+
+  @include mq(mobile-only) {
+    text-align: center;
+  }
+
+  &--team {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: setLineHeight(19, 16);
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: none;
+  }
+}
+
+.info__text {
+  font-size: 14px;
+  line-height: setLineHeight(24, 14);
+  letter-spacing: 0.03em;
+  color: var(--ordinary-text);
+
+  &--team {
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    line-height: setLineHeight(19, 16);
+    text-align: center;
+    color: var(--ordinary-text);
+  }
+
+  &--relative {
+    position: absolute;
+    display: block;
+
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    bottom: 0;
+    left: 0;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--button-txt);
+  }
+}
+
+.info__div-block {
+  display: flex;
+  height: 120px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: var(--button-background);
+}
+
+.info__image {
+  width: 100%;
+
+}
+
+.info__content {
+  @include section-padds(16px, 16px);
+}
+
+.info__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+
+  transition: box-shadow var(--transitime) var(--transifunction);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .info__overlay,
+  &:focus .info__overlay {
+    transform: translateY(0);
+  }
+}
+
+.info__thumb {
+  position: relative;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
+.info__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  top: 0;
+  left: 0;
+
+  transform: translateY(101%);
+  transition: transform var(--transitime) var(--transifunction);
+}
+
+.info__overlay-text {
+  display: block;
+  padding-left: 24px;
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--button-txt);
+}
+
+.info__border {
+  flex-grow: 1;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-right: 1px solid var(--works-border);
+  border-left: 1px solid var(--works-border);
+  border-bottom: 1px solid var(--works-border);
+}

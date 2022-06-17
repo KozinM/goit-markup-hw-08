@@ -20,42 +20,121 @@
   </head>
   <body>
     <header class="container header__container">
-      <nav class="navigation">
-        <a class="logo-link" href="/"
-          >Web<span class="logo-link__text">Studio</span></a
-        >
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="index.html">Студия</a>
-          </li>
-          <li class="navigation__item navigation__item--current">
-            <a class="navigation__link" href="portfolio.html">Портфолио</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <ul class="contacts contacts--right">
-        <li class="contacts__item">
-          <a class="contacts__link" href="tel:+380961111111">
-            <svg class="contacts__icon" width="10" height="16">
-              <use href="./images/icons.svg#icon-smartphone"></use>
-            </svg>
-            +380 96 111 11 11</a
-          >
-        </li>
-        <li class="contacts__item contacts__item--last">
-          <a class="contacts__link" href="mailto:info@devstudio.com">
-            <svg class="contacts__icon" width="16" height="12">
-              <use href="./images/icons.svg#icon-envelope"></use>
-            </svg>
-            info@devstudio.com</a
-          >
-        </li>
-      </ul>
       
-    </header>
+      <a class="logo-link" href="/"
+        >Web<span class="logo-link__text">Studio</span></a
+      >
+      <button
+        type="button"
+        class="menu-button"
+        aria-label="переключатель мобильного меню"
+        aria-expanded="false"
+        aria-controls="menu-container"
+        data-menu-button
+      >
+        <svg width="24px" height="16px">
+          <use
+            class="menu-button__cross"
+            href="./images/icons.svg#icon-cross"
+          ></use>
+          <use
+            class="menu-button__burger"
+            href="./images/icons.svg#icon-burger"
+          ></use>
+        </svg>
+      </button>
+      <div class="menu-container" id="menu-container" data-menu>
+        <nav class="navigation">
+
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="index.html">Студия</a>
+            </li>
+            <li class="navigation__item navigation__item--current">
+              <a class="navigation__link" href="portfolio.html">Портфолио</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-container__contacts">
+          <ul class="contacts menu-container__contacts">
+            <li class="contacts__item menu-container__contacts">
+              <a
+                class="contacts__link contacts__link--tel"
+                href="tel:+380961111111"
+              >
+                <svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +380 96 111 11 11</a
+              >
+            </li>
+            <li class="contacts__item contacts__item--last menu-container__contacts">
+              <a class="contacts__link" href="mailto:info@devstudio.com">
+                <svg class="contacts__icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mobile-socials">
+          <ul class="socials-list mobile-socials__socials-list">
+            <li class="socials-list__item mobile-socials__socials-list">
+              <a
+                class="socials-list__link socials-list__link--text"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ссылка на Instagram"
+              >
+                <span class="socials-list__name">Instagram</span>
+              </a>
+            </li>
+            <li class="socials-list__item mobile-socials__socials-list">
+              <a
+                class="socials-list__link socials-list__link--text"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ссылка на Twitter"
+              >
+                <span class="socials-list__name">Twitter</span>
+              </a>
+            </li>
+            <li class="socials-list__item mobile-socials__socials-list">
+              <a
+                class="socials-list__link socials-list__link--text"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ссылка на Facebook"
+              >
+                <span class="socials-list__name">Facebook</span>
+              </a>
+            </li>
+            <li
+              class="socials-list__item mobile-socials__socials-list socials-list__item--last"
+            >
+              <a
+                class="socials-list__link socials-list__link--text"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ссылка на Linkedin"
+              >
+                <span class="socials-list__name">Linkedin</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+  </header>
+
     <main>
       <section class="works">
         <div class="container works__container">
@@ -83,10 +162,19 @@
                 <div class="info__thumb">
                   <img
                     class="info__image"
-                    src="./images/imgtehnocrack.jpg"
+                    srcset="
+                    ./images/portfolio/portfolio_img354@1x-1.jpg 354w,
+                    ./images/portfolio/portfolio_img370@1x-1.jpg 370w,
+                    ./images/portfolio/portfolio_img450@1x-1.jpg 450w,
+                    ./images/portfolio/portfolio_img354@2x-1.jpg 708w,
+                    ./images/portfolio/portfolio_img370@2x-1.jpg 740w,
+                    ./images/portfolio/portfolio_img450@2x-1.jpg 900w
+                    "
+                    src="./images/portfolio/portfolio_img354@1x-1.jpg"
+                    sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
                     alt=""
-                    width="370"
-                  />
+                    width="370"/>
+
                   <div class="info__overlay">
                     <p class="info__overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -105,12 +193,22 @@
             <li class="info__card info__card--width info__card--bottom info__card--3c">
               <a class="info__link" href="">
                 <div class="info__thumb">
+
                   <img
-                    class="info__image"
-                    src="./images/imgbasketposter.jpg"
-                    alt=""
-                    width="370"
-                  />
+                  class="info__image"
+                  srcset="
+                  ./images/portfolio/portfolio_img354@1x-2.jpg 354w,
+                  ./images/portfolio/portfolio_img370@1x-2.jpg 370w,
+                  ./images/portfolio/portfolio_img450@1x-2.jpg 450w,
+                  ./images/portfolio/portfolio_img354@2x-2.jpg 708w,
+                  ./images/portfolio/portfolio_img370@2x-2.jpg 740w,
+                  ./images/portfolio/portfolio_img450@2x-2.jpg 900w
+                  "
+                  src="./images/portfolio/portfolio_img354@1x-2.jpg"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt=""
+                  width="370"/>
+
                   <div class="info__overlay">
                     <p class="info__overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -129,12 +227,23 @@
             <li class="info__card info__card--width info__card--bottom info__card--3c">
               <a class="info__link" href="">
                 <div class="info__thumb">
+
                   <img
-                    class="info__image"
-                    src="./images/imgseafoodrest.jpg"
-                    alt=""
-                    width="370"
-                  />
+                  class="info__image"
+                  srcset="
+                  ./images/portfolio/portfolio_img354@1x-3.jpg 354w,
+                  ./images/portfolio/portfolio_img370@1x-3.jpg 370w,
+                  ./images/portfolio/portfolio_img450@1x-3.jpg 450w,
+                  ./images/portfolio/portfolio_img354@2x-3.jpg 708w,
+                  ./images/portfolio/portfolio_img370@2x-3.jpg 740w,
+                  ./images/portfolio/portfolio_img450@2x-3.jpg 900w
+                  "
+                  src="./images/portfolio/portfolio_img354@1x-3.jpg"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt=""
+                  width="370"/>
+
+
                   <div class="info__overlay">
                     <p class="info__overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -153,12 +262,23 @@
             <li class="info__card info__card--width info__card--bottom info__card--3c">
               <a class="info__link" href="">
                 <div class="info__thumb">
+
                   <img
-                    class="info__image"
-                    src="./images/imgheadphones.jpg"
-                    alt=""
-                    width="370"
-                  />
+                  class="info__image"
+                  srcset="
+                  ./images/portfolio/portfolio_img354@1x-4.jpg 354w,
+                  ./images/portfolio/portfolio_img370@1x-4.jpg 370w,
+                  ./images/portfolio/portfolio_img450@1x-4.jpg 450w,
+                  ./images/portfolio/portfolio_img354@2x-4.jpg 708w,
+                  ./images/portfolio/portfolio_img370@2x-4.jpg 740w,
+                  ./images/portfolio/portfolio_img450@2x-4.jpg 900w
+                  "
+                  src="./images/portfolio/portfolio_img354@1x-4.jpg"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt=""
+                  width="370"/>
+
+
                   <div class="info__overlay">
                     <p class="info__overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -178,11 +298,20 @@
               <a class="info__link" href="">
                 <div class="info__thumb">
                   <img
-                    class="info__image"
-                    src="./images/imgboxes.jpg"
-                    alt=""
-                    width="370"
-                  />
+                  class="info__image"
+                  srcset="
+                  ./images/portfolio/portfolio_img354@1x-5.jpg 354w,
+                  ./images/portfolio/portfolio_img370@1x-5.jpg 370w,
+                  ./images/portfolio/portfolio_img450@1x-5.jpg 450w,
+                  ./images/portfolio/portfolio_img354@2x-5.jpg 708w,
+                  ./images/portfolio/portfolio_img370@2x-5.jpg 740w,
+                  ./images/portfolio/portfolio_img450@2x-5.jpg 900w
+                  "
+                  src="./images/portfolio/portfolio_img354@1x-5.jpg"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt=""
+                  width="370"/>
+
                   <div class="info__overlay">
                     <p class="info__overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -202,11 +331,19 @@
               <a class="info__link" href="">
                 <div class="info__thumb">
                   <img
-                    class="info__image"
-                    src="./images/imgdisplay.jpg"
-                    alt=""
-                    width="370"
-                  />
+                  class="info__image"
+                  srcset="
+                  ./images/portfolio/portfolio_img354@1x-6.jpg 354w,
+                  ./images/portfolio/portfolio_img370@1x-6.jpg 370w,
+                  ./images/portfolio/portfolio_img450@1x-6.jpg 450w,
+                  ./images/portfolio/portfolio_img354@2x-6.jpg 708w,
+                  ./images/portfolio/portfolio_img370@2x-6.jpg 740w,
+                  ./images/portfolio/portfolio_img450@2x-6.jpg 900w
+                  "
+                  src="./images/portfolio/portfolio_img354@1x-6.jpg"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt=""
+                  width="370"/>
                   <div class="info__overlay">
                     <p class="info__overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -226,11 +363,19 @@
               <a class="info__link" href="">
                 <div class="info__thumb">
                   <img
-                    class="info__image"
-                    src="./images/imgbook.jpg"
-                    alt=""
-                    width="370"
-                  />
+                  class="info__image"
+                  srcset="
+                  ./images/portfolio/portfolio_img354@1x-7.jpg 354w,
+                  ./images/portfolio/portfolio_img370@1x-7.jpg 370w,
+                  ./images/portfolio/portfolio_img450@1x-7.jpg 450w,
+                  ./images/portfolio/portfolio_img354@2x-7.jpg 708w,
+                  ./images/portfolio/portfolio_img370@2x-7.jpg 740w,
+                  ./images/portfolio/portfolio_img450@2x-7.jpg 900w
+                  "
+                  src="./images/portfolio/portfolio_img354@1x-7.jpg"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt=""
+                  width="370"/>
                   <div class="info__overlay">
                     <p class="info__overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -250,11 +395,19 @@
               <a class="info__link" href="">
                 <div class="info__thumb">
                   <img
-                    class="info__image"
-                    src="./images/imglabel.jpg"
-                    alt=""
-                    width="370"
-                  />
+                  class="info__image"
+                  srcset="
+                  ./images/portfolio/portfolio_img354@1x-8.jpg 354w,
+                  ./images/portfolio/portfolio_img370@1x-8.jpg 370w,
+                  ./images/portfolio/portfolio_img450@1x-8.jpg 450w,
+                  ./images/portfolio/portfolio_img354@2x-8.jpg 708w,
+                  ./images/portfolio/portfolio_img370@2x-8.jpg 740w,
+                  ./images/portfolio/portfolio_img450@2x-8.jpg 900w
+                  "
+                  src="./images/portfolio/portfolio_img354@1x-8.jpg"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt=""
+                  width="370"/>
                   <div class="info__overlay">
                     <p class="info__overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -274,11 +427,19 @@
               <a class="info__link" href="">
                 <div class="info__thumb">
                   <img
-                    class="info__image"
-                    src="./images/imgnotebook.jpg"
-                    alt=""
-                    width="370"
-                  />
+                  class="info__image"
+                  srcset="
+                  ./images/portfolio/portfolio_img354@1x-9.jpg 354w,
+                  ./images/portfolio/portfolio_img370@1x-9.jpg 370w,
+                  ./images/portfolio/portfolio_img450@1x-9.jpg 450w,
+                  ./images/portfolio/portfolio_img354@2x-9.jpg 708w,
+                  ./images/portfolio/portfolio_img370@2x-9.jpg 740w,
+                  ./images/portfolio/portfolio_img450@2x-9.jpg 900w
+                  "
+                  src="./images/portfolio/portfolio_img354@1x-9.jpg"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt=""
+                  width="370"/>
                   <div class="info__overlay">
                     <p class="info__overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -300,21 +461,23 @@
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <div class="logo-adress">
+        <div class="logo-adress footer_logo-adress">
           <a class="logo-link footer__logo-link" href="/"
-            >Web<span class="logo-link__text logo-link__text--dark">Studio</span></a
+            >Web<span class="logo-link__text logo-link__text--dark"
+              >Studio</span
+            ></a
           >
-          <address class="adress">
-            г. Киев, пр-т Леси Украинки, 26
-          </address>
-          <ul class="contacts contacts--column">
-            <li class="contacts__item contacts__item--column">
-              <a class="contacts__link" href="mailto:info@devstudio.com"
+          <address class="adress">г. Киев, пр-т Леси Украинки, 26</address>
+          <ul class="contacts footer__contacts contacts--column">
+            <li class="contacts__item footer__contacts contacts__item--column">
+              <a
+                class="contacts__link footer__link"
+                href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-            <li class="contacts__item">
-              <a class="contacts__link" href="tel:+380961111111"
+            <li class="contacts__item  footer__contacts">
+              <a class="contacts__link footer__link" href="tel:+380961111111"
                 >+380 96 111 11 11</a
               >
             </li>
@@ -378,9 +541,7 @@
           </ul>
         </div>
         <div class="subscription">
-          <h3 class="subscription__title">
-            подпишитесь на рассылку
-          </h3>
+          <h3 class="subscription__title">подпишитесь на рассылку</h3>
           <form class="subscription-form">
             <div class="subscription-form__field">
               <input
@@ -391,19 +552,18 @@
                 id="mail"
               />
             </div>
-           <!--  <div class="subscription-form-field"> -->
-              <button class="btn btn--submit" type="submit">
-                <span class="btn__title">Подписаться&nbsp; </span>
-                <!-- <span> -->
-                  <svg class="btn__icon" width="24" height="24">
-                    <use href="./images/icons.svg#icon-send"></use>
-                  </svg>
-               <!--  </span> -->
-              </button>
-           <!--  </div> -->
+
+            <button class="btn btn--submit" type="submit">
+              <span class="btn__title">Подписаться&nbsp; </span>
+
+              <svg class="btn__icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

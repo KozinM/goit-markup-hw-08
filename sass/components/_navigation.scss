@@ -1,5 +1,98 @@
 /* ------------- <Navigation> ------------- */
 .navigation {
-    display: flex;
+  display: flex;
+  align-items: center;
+}
+
+.navigation__item {
+  display: block;
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0px;
   }
-  /* ------------- <Navigation> ------------- */
+}
+
+.navigation__list {
+  @include mq(mobile-only) {
+    margin-bottom: 302px;
+  }
+
+  @include mq(tablet) {
+    display: flex;
+    align-items: center;
+    margin-right: 84px;
+  }
+
+  @include mq(desktop){
+    margin-right: 305px;
+  }
+}
+
+.navigation__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  transition: color var(--transitime) var(--transifunction),
+    --color1 var(--transitime) var(--transifunction);
+
+  &:hover,
+  &:focus,
+  .navigation__item--current > & {
+    color: var(--active-color);
+  }
+
+  @include mq(mobile-only) {
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    color: var(--text-color);
+
+    font-weight: 500;
+    font-size: 40px;
+    line-height: setLineHeight(47, 40);
+    letter-spacing: 0.02em;
+  }
+
+  @include mq(tablet){
+  // for underline for current page
+  .navigation__item > & {
+    position: relative;
+  }
+
+  // underline for current page
+  .navigation__item--current > &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--active-color);
+    border-radius: 2px;
+  }
+  }
+}
+
+.navigation__item {
+  @include mq(mobile-only) {
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* ------------- <Navigation> ------------- */

@@ -1,0 +1,12 @@
+.strength {
+    @include section-padds(60px, 60px);
+
+    @include mq(desktop){
+      @include section-padds(94px, 94px);
+    }
+  }
+
+ .info__card.strength__info{
+  width:370px;
+ }
+  

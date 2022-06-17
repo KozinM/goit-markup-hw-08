@@ -1,0 +1,124 @@
+.btn{
+
+    border: 0px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    background-color: var(--button-background);
+
+    &:hover,
+    &:focus {
+      background-color: var(--active-color);
+      color: var(--button-txt);
+    }
+    
+    &--hero{
+
+        display: block;
+        padding: 10px 32px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: setLineHeight(30,16);
+        text-align: center;
+        letter-spacing: 0.06em;
+    
+        background-color: var(--active-color);
+        color: var(--button-txt);
+    }
+
+    &--submit {
+      min-width: 200px;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+  
+      padding-left: 29px;
+      padding-right: 29px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-left: auto;
+      margin-right: auto;
+  
+      color: var(--button-txt);
+      background-color: var(--active-color);
+  
+      font-weight: 700;
+      font-size: 16px;
+      line-height: setLineHeight(30,16  );
+      letter-spacing: 0.06em;
+  
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      border-width: 0px;
+    }
+
+    &--filter {
+      padding-top: 6px;
+      padding-right: 22px;
+      padding-bottom: 6px;
+      padding-left: 22px;
+
+      font-weight: 500;
+      font-size: 16px;
+      line-height: setLineHeight(26,16);
+      text-align: center;
+      letter-spacing: 0.03em;
+
+  
+      transition: box-shadow var(--transitime) var(--transifunction),
+        color var(--transitime) var(--transifunction),
+        background-color var(--transitime) var(--transifunction);
+  
+      &:hover,
+      &:focus {
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+          0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      }
+      @include mq(mobile-only){
+        margin-bottom:15px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: setLineHeight(26,16);
+        letter-spacing: 0.03em;
+      }
+
+
+    }
+}
+
+.btn__icon {
+  fill: var(--button-txt);
+}
+
+.btn-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+
+  color: var(--text-color);
+  background-color: var(--button-txt);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: --color1 var(--transitime) var(--transifunction);
+
+  &--right {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  &:hover > .btn-close__icon,
+  &:focus > .btn-close__icon {
+    --color1: var(--active-color);
+  }
+}

@@ -1,0 +1,31 @@
+.team {
+    background-color: var(--button-background);
+    
+    @include section-padds(60px, 60px);
+
+    @include mq(desktop){
+      @include section-padds(94px, 94px);
+    }
+  
+  }
+
+  .team__title{
+
+    margin-bottom:30px;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: setLineHeight(33,28);
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    @include mq(desktop){
+      margin-bottom:50px;
+
+      font-size: 36px;
+      line-height: setLineHeight(42,36);
+    }
+
+  }
+
+  

@@ -1,24 +1,27 @@
 /* ------------- <Logo> ------------- */
 .logo-link {
   display: block;
-  align-items: center;
+
+/*   margin-left:15px; */
+  margin-top:16px;
+  margin-bottom:16px; 
+
+  text-decoration: none;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px; 
+  line-height: setLineHeight(28, 24);
+  letter-spacing: 0.03em;
 
   color: var(--active-color);
 
   transition: color var(--transitime) var(--transifunction),
     --color1 var(--transitime) var(--transifunction);
 
-  @include mq(mobile) {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    margin-right: 93px;
+  @include mq(tablet) {
+ /*    margin-right:88px; */
 
-    text-decoration: none;
-    font-family: "Ralway", sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
   }
 }
 .logo-link__text {

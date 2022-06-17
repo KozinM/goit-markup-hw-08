@@ -1,0 +1,58 @@
+/* ------------- <Modal-backdrop> ------------- */
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: transform var(--transitime) var(--transifunction),
+      opacity var(--transitime) var(--transifunction);
+  }
+  
+  .modal-backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .modal-backdrop.is-hidden .modal-view {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  .modal-view {
+    position: absolute;
+    padding-left: 40px;
+    padding-right: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 450px;
+    height: 609px;
+  
+    @include mq(desktop){
+    width: 528px;
+    height: 581px; 
+  }
+    /* z-index: 10; */
+  
+    background-color: var(--button-txt);
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  
+    transition: transform var(--transitime) var(--transifunction),
+      opacity var(--transitime) var(--transifunction),
+      visibility var(--transitime) var(--transifunction);
+  }
+  
+  .modal-view__title {
+    padding-top: 40px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  
+  /* ------------- <Modal-backdrop> ------------- */

@@ -1,0 +1,26 @@
+.we-do {
+  @include section-padds(0px, 94px);
+
+  @include mq(mobile-only) {
+    display: none;
+  }
+
+  @include mq(tablet-only) {
+    display: none;
+  }
+}
+
+.we-do__container {
+  flex-direction: column;
+}
+
+.we-do__title {
+  display: block;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+}

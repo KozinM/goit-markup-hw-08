@@ -1,0 +1,39 @@
+.works {
+    @include section-padds(60px, 60px);
+  
+    @include mq(desktop){
+      @include section-padds(94px, 94px);
+    }
+  }
+
+  .works__container {
+    flex-direction: column;
+  }
+  
+  .works__info {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 56px;
+
+    @include mq(tablet){
+      justify-content: unset;
+    }
+  }
+  
+  .works__title {
+    text-align: left;
+    text-transform: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: setLineHeight(36,18);
+    letter-spacing: 0.06em;
+  
+    color: var(--text-color);
+  }
+  
+  .works__text {
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+    color: var(--ordinary-text);
+  }
