@@ -52,6 +52,7 @@
 .menu-button.is-open .menu-button__cross {
   @include mq(mobile-only) {
     display: block;
+    position: fixed;
   }
 }
 
